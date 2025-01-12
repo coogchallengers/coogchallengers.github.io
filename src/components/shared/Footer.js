@@ -18,7 +18,7 @@ function Footer() {
                 <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                     <i className="fab fa-tiktok"></i>
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/coogchallengers" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <i className="fab fa-github"></i>
                 </a>
             </div>
