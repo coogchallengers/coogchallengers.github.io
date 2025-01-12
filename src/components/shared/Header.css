@@ -1,0 +1,45 @@
+.header {
+    background-color: white;
+    color: black;
+    padding: 15px 30px; /* Balanced padding for height and spacing */
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Vertical alignment */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a modern look */
+    position: sticky; /* Makes the navbar stick at the top during scroll */
+    top: 0; /* Ensures stickiness */
+    z-index: 1000; /* Keeps it above other elements */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px; /* Ideal height for the logo */
+    margin-right: 15px; /* Space between logo and text */
+}
+
+.logo span {
+    font-size: 18px; /* Adjusted for visibility */
+    font-weight: bold;
+    color: #333;
+}
+
+.nav {
+    display: flex;
+    gap: 20px; /* Consistent spacing between links */
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    font-size: 16px; /* Readable size */
+    font-weight: bold;
+    padding: 5px 10px; /* Adds clickable area */
+}
+
+.nav-link:hover {
+    color: orange;
+}
