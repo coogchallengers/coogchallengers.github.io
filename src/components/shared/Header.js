@@ -20,7 +20,7 @@ function Header() {
                 {/* Volunteer link to Google Form */}
                 <a href="https://your-google-form-link.com" target="_blank" rel="noopener noreferrer" className="nav-link">Volunteer</a>
 
-                <a href="https://github.com/jacquelinesanchezA1" target="_blank" rel="noopener noreferrer" className="nav-link">Resources</a>
+                <a href="https://github.com/coogchallengers" target="_blank" rel="noopener noreferrer" className="nav-link">Resources</a>
 
                 <a href="https://linktr.ee/coogchallengers" target="_blank" rel="noopener noreferrer" className="nav-link">Connect</a>
 
