@@ -2,12 +2,12 @@
   "name": "coogchallengers",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://username.github.io/coogchallengers",  // Add this line
+  "homepage": "https://username.github.io/coogchallengers", 
   "dependencies": {
     "cra-template": "1.2.0",
-    "react": "^18.0.0",   // Downgrade React to a stable version
+    "react": "^18.0.0",  
     "react-calendar": "^5.1.0",
-    "react-dom": "^18.0.0",  // Downgrade ReactDOM as well
+    "react-dom": "^18.0.0", 
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
