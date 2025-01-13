@@ -22,6 +22,10 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      # Install gh-pages locally
+      - name: Install gh-pages
+        run: npm install gh-pages --save-dev  # Install gh-pages as a dev dependency
+
       # Build the project (with CI=false to ignore linting errors)
       - name: Build the project
         run: CI=false npm run build
@@ -42,6 +46,6 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           git remote set-url origin git@github.com:coogchallengers/coogchallengers.github.io.git
-          gh-pages -d build
+          npx gh-pages -d build  # Use npx to run gh-pages from the local node_modules
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
