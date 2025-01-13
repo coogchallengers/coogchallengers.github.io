@@ -36,8 +36,9 @@ jobs:
       - name: Build the project
         run: CI=false npm run build
 
-      # Deploy the app to GitHub Pages using gh-pages command
+            # Deploy the app to GitHub Pages using npm run deploy
       - name: Deploy to GitHub Pages
-        run: npx gh-pages -d build
+        run: npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
+
