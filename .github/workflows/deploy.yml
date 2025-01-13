@@ -24,16 +24,12 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      # Install gh-pages globally to make sure it's available in the environment
-      - name: Install gh-pages globally
-        run: npm install -g gh-pages
-
       # Build the project (with CI=false to ignore linting errors)
       - name: Build the project
         run: CI=false npm run build
 
-      # Deploy the app to GitHub Pages
+      # Deploy the app to GitHub Pages using npx
       - name: Deploy to GitHub Pages
-        run: gh-pages -d build
+        run: npx gh-pages -d build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
