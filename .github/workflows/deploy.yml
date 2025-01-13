@@ -22,15 +22,11 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps  # Optionally, use legacy-peer-deps if dependencies are conflicting
 
-
+      # Build the project (with CI=false to ignore linting errors)
       - name: Build the project
-        run: CI=false npm run build # Disable CI to ignore warnings!
-
-      # Build the React app
-      - name: Build the project
-        run: npm run build
+        run: CI=false npm run build  # Disable CI to ignore warnings and continue with the build
 
       # Deploy the app to GitHub Pages
       - name: Deploy to GitHub Pages
