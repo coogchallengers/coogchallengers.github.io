@@ -32,11 +32,11 @@ jobs:
       - name: Install gh-pages globally
         run: npm install -g gh-pages
 
-      # Set Git config for deploy (GitHub Actions needs this info)
-      - name: Set Git config
+      # Configure Git to use GITHUB_TOKEN for authentication (to avoid password prompt)
+      - name: Set GitHub Token for authentication
         run: |
-          git config --global user.email "coogarchallengers@gmail.com"
-          git config --global user.name "coogchallengers"
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
           git config --global url."https://${{ secrets.GITHUB_TOKEN }}@github.com".insteadOf "https://github.com"
 
       # Build the project (with CI=false to ignore linting errors)
