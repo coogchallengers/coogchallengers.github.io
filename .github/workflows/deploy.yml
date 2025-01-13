@@ -22,14 +22,20 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: npm install --legacy-peer-deps  # Optionally, use legacy-peer-deps if dependencies are conflicting
+        run: npm install --legacy-peer-deps  # Optionally use legacy-peer-deps if dependencies conflict
 
-      # Build the project (with CI=false to ignore linting errors)
+      # Set Git config for user email and name
+      - name: Configure Git user
+        run: |
+          git config --global user.email "coogarchallengers@gmail.com" 
+          git config --global user.name "coogarchallengers"  
+
+      # Build the project
       - name: Build the project
-        run: CI=false npm run build  # Disable CI to ignore warnings and continue with the build
+        run: CI=false npm run build  # Disable CI to ignore linting errors and continue with the build
 
       # Deploy the app to GitHub Pages
       - name: Deploy to GitHub Pages
-        run: npm run deploy  # This will trigger the 'deploy' script you added
+        run: npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub for authentication
