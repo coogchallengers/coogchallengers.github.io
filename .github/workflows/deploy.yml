@@ -37,6 +37,7 @@ jobs:
         run: |
           git config --global user.email "coogarchallengers@gmail.com"
           git config --global user.name "coogchallengers"
+          git config --global url."https://${{ secrets.GITHUB_TOKEN }}@github.com".insteadOf "https://github.com"
 
       # Build the project (with CI=false to ignore linting errors)
       - name: Build the project
