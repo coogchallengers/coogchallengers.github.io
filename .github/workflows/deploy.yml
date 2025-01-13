@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      # Clear npm cache
+      - name: Clear npm cache
+        run: npm cache clean --force
+
       # Force install gh-pages globally
       - name: Install gh-pages globally
         run: npm install -g gh-pages
