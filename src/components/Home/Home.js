@@ -167,7 +167,7 @@ function Home() {
                     </section>
 
 
-{/**************************     Section 4      ******************************** */}
+{/**************************    Section 4      ******************************** */}
 
                     {/*officers pfp which if the mouse hovers over a officer both email and linkedin icon will pop up and is linked to their socials*/}
 
@@ -176,86 +176,99 @@ function Home() {
                         <div className="officers-grid">
                             {[
                                 {
-                                    name: "John Cena",
+                                    name: "Xavier Mares",
                                     role: "President",
                                     img: "/images/officers_pfp/2025/cute_cat_1.jpg",
-                                    email: "johncena@example.com"
+                                    email: "johncena@example.com",
+                                    linkedin:"linkedin.com"
                                 },
                                 {
-                                    name: "John Cena",
+                                    name: "Miguel Rodriguez",
                                     role: "Vice President",
                                     img: "/images/officers_pfp/2025/cute_cat_2.jpg",
-                                    email: "johncena@example.com"
+                                    email: "marodr77@cougarnet.uh.edu",
+                                    linkedin:"https://www.linkedin.com/in/miguel-rodriguez302002 "
                                 },
                                 {
-                                    name: "John Cena",
+                                    name: "Mustafa Sahin",
                                     role: "Technical Director",
                                     img: "/images/officers_pfp/2025/cute_cat.jpeg",
-                                    email: "johncena@example.com"
+                                    email: "mesahin2@cougarnet.uh.edu", 
+                                    linkedin:"http://linkedin.com/in/mustafa-sahin03"
                                 },
                                 {
-                                    name: "John Cena",
+                                    name: "Jacqueline Sanchez",
                                     role: "Technical Director",
                                     img: "/images/officers_pfp/2025/cute_cat_1.jpg",
-                                    email: "johncena@example.com"
+                                    email: "jsanchez75@uh.edu",
+                                    linkedin:"https://www.linkedin.com/in/jacquelinesa7/"
                                 },
                                 {
-                                    name: "John Cena",
+                                    name: "Tan Tran",
                                     role: "Data Science Lead",
                                     img: "/images/officers_pfp/2025/cute_cat_2.jpg",
-                                    email: "johncena@example.com"
+                                    email: "thtran39@cougarnet.uh.edu", 
+                                    linkedin:"https://www.linkedin.com/in/tan-h-tran/"
                                 },
                                 {
-                                    name: "John Cena",
+                                    name: "Adriana Alvarez",
                                     role: "Data Science Lead",
                                     img: "/images/officers_pfp/2025/cute_cat_3.jpg",
-                                    email: "johncena@example.com"
+                                    email: "aalvar55@cougarnet.uh.edu",
+                                    linkedin:"https://www.linkedin.com/in/adriana-alvarez8"
                                 },
                                 {
-                                    name: "John Cena",
+                                    name: "Gabriela Romero Ramirez",
                                     role: "Data Structure Lead",
                                     img: "/images/officers_pfp/2025/cute_cat_1.jpg",
-                                    email: "johncena@example.com"
+                                    email: "email.com",
+                                    linkedin: "http://linkedin.com/in/gabriela-romero-ramirez"
+
                                 },
                                 {
-                                    name: "John Cena",
+                                    name: "Jayson Luong",
                                     role: "Data Structure Lead",
                                     img: "/images/officers_pfp/2025/cute_cat_3.jpg",
-                                    email: "johncena@example.com"
+                                    email: "jkluong2@cougarnet.uh.edu",
+                                    linkedin: "https://www.linkedin.com/in/jaysonluong/"
                                 },
                                 {
-                                    name: "John Cena",
+                                    name: "Shinelle Barretto",
                                     role: "Event Coordinator",
                                     img: "/images/officers_pfp/2025/cute_cat.jpeg",
-                                    email: "johncena@example.com"
+                                    email: "srbarret@cougarnet.uh.edu",
+                                    linkedin:"https://www.linkedin.com/in/shinelle-barretto-8a7487268"
                                 },
                                 {
-                                    name: "John Cena",
+                                    name: "Stephanie Alvarez",
                                     role: "Event Coordinator",
                                     img: "/images/officers_pfp/2025/cute_cat_1.jpg",
-                                    email: "johncena@example.com"
+                                    email: "Salvar27@cougarnet.uh.edu",
+                                    linkedin:"http://linkedin.com/in/stephanie-alvarez-pleasehireme"
                                 },
                                 {
-                                    name: "John Cena",
+                                    name: "Jacqueline Tran",
                                     role: "Event Coordinator",
                                     img: "/images/officers_pfp/2025/cute_cat_2.jpg",
-                                    email: "johncena@example.com"
+                                    email: "Jatran7@cougarnet.uh.edu",
+                                    linkedin:"https://www.linkedin.com/in/jacqueline-tran-319a28288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                                 },
                                 {
-                                    name: "John Cena",
-                                    role: "Engagement & Outreach Director",
+                                    name: "Angela-Marie Abrea",
+                                    role: "Social Media Director",
                                     img: "/images/officers_pfp/2025/cute_cat_3.jpg",
-                                    email: "johncena@example.com"
+                                    email: "afabrea@cougarnet.uh.edu",
+                                    linkedin:"https://www.linkedin.com/in/angelam-abrea/"
                                 },
                                 {
-                                    name: "John Cena",
+                                    name: "Abigail",
                                     role: "Creative Director",
                                     img: "/images/officers_pfp/2025/cute_cat_3.jpg",
                                     email: "johncena@example.com"
                                 },
                                 {
-                                    name: "John Cena",
-                                    role: "Social Media Director",
+                                    name: "Miles",
+                                    role: "Engagement & Outreach Director",
                                     img: "/images/officers_pfp/2025/cute_cat_3.jpg",
                                     email: "johncena@example.com"
                                 }
@@ -272,7 +285,7 @@ function Home() {
                                     <p>{officer.role}</p>
                                     <div className="officer-contact">
                                         <a
-                                            href="https://www.linkedin.com"
+                                            href={officer.linkedin}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="contact-icon"
