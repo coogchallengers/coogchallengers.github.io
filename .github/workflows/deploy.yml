@@ -32,7 +32,8 @@ jobs:
       - name: Set up SSH key for deployment
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_SSH_KEY }}  # Make sure this secret is added correctly
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
 
       # Deploy the app to GitHub Pages using gh-pages with SSH
       - name: Deploy to GitHub Pages
