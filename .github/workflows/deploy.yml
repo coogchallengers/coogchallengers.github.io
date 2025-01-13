@@ -1,5 +1,3 @@
-name: Deploy to GitHub Pages
-
 on:
   push:
     branches:
@@ -18,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '14'  # Use Node version appropriate for your app
 
       # Install dependencies
       - name: Install dependencies
@@ -28,20 +26,22 @@ jobs:
       - name: Build the project
         run: CI=false npm run build
 
-      # Install gh-pages globally
-      - name: Install gh-pages
-        run: npm install -g gh-pages
-
       # Set up SSH for GitHub Pages deployment
       - name: Set up SSH key for deployment
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_SSH_KEY }}
+
+      # Configure Git user for GitHub Actions deployment
+      - name: Configure Git user
+        run: |
+          git config --global user.email "coogarchallengers@gmail.com"
+          git config --global user.name "coogchallengers"
 
       # Deploy the app to GitHub Pages using gh-pages with SSH
       - name: Deploy to GitHub Pages
         run: |
-          git remote set-url origin git@github.com:coogchallengers/coogchallengers.github.io.git  # Ensure SSH URL
+          git remote set-url origin git@github.com:coogchallengers/coogchallengers.github.io.git
           gh-pages -d build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
