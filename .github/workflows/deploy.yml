@@ -28,13 +28,15 @@ jobs:
       - name: Clear npm cache
         run: npm cache clean --force
 
-      # Install gh-pages globally
+      # Install gh-pages globally (if not already installed)
       - name: Install gh-pages globally
         run: npm install -g gh-pages
 
-      # Debug: Verify gh-pages installation
-      - name: Verify gh-pages installation
-        run: gh-pages --version
+      # Set Git config for deploy (GitHub Actions needs this info)
+      - name: Set Git config
+        run: |
+          git config --global user.email "coogarchallengers@gmail.com"
+          git config --global user.name "coogchallengers"
 
       # Build the project (with CI=false to ignore linting errors)
       - name: Build the project
@@ -42,6 +44,6 @@ jobs:
 
       # Deploy the app to GitHub Pages using gh-pages
       - name: Deploy to GitHub Pages
-        run: gh-pages -d build  # Uses globally installed gh-pages
+        run: npm run deploy  # Ensure the script uses the locally installed gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
