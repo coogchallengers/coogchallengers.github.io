@@ -28,12 +28,15 @@ jobs:
       - name: Build the project
         run: CI=false npm run build
 
+      # Install gh-pages globally
+      - name: Install gh-pages
+        run: npm install -g gh-pages
+
       # Set up SSH for GitHub Pages deployment
       - name: Set up SSH key for deployment
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}  # Use your correct secret name here
 
       # Deploy the app to GitHub Pages using gh-pages with SSH
       - name: Deploy to GitHub Pages
