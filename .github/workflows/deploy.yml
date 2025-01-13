@@ -30,6 +30,6 @@ jobs:
 
       # Deploy the app to GitHub Pages
       - name: Deploy to GitHub Pages
-        run: npm run deploy
+        run: npm run deploy  # This will trigger the 'deploy' script you added
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
