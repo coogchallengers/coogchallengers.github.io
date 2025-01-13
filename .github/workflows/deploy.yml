@@ -22,20 +22,16 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: npm install --legacy-peer-deps  # Optionally use legacy-peer-deps if dependencies conflict
+        run: npm install --legacy-peer-deps
 
-      # Set Git config for user email and name
-      - name: Configure Git user
-        run: |
-          git config --global user.email "coogarchallengers@gmail.com" 
-          git config --global user.name "coogarchallengers"  
-
-      # Build the project
+      # Build the project (with CI=false to ignore linting errors)
       - name: Build the project
-        run: CI=false npm run build  # Disable CI to ignore linting errors and continue with the build
+        run: CI=false npm run build
 
       # Deploy the app to GitHub Pages
       - name: Deploy to GitHub Pages
-        run: npm run deploy
+        run: |
+          npm run build
+          GH_TOKEN=${{ secrets.GITHUB_TOKEN }} gh-pages -d build
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub for authentication
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
