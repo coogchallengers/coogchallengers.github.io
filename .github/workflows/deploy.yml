@@ -28,11 +28,11 @@ jobs:
       - name: Clear npm cache
         run: npm cache clean --force
 
-      # Install gh-pages globally (if not already installed)
+      # Install gh-pages globally
       - name: Install gh-pages globally
         run: npm install -g gh-pages
 
-      # Debug: Verify gh-pages installation (this step can help with debugging)
+      # Debug: Verify gh-pages installation
       - name: Verify gh-pages installation
         run: gh-pages --version
 
@@ -40,12 +40,8 @@ jobs:
       - name: Build the project
         run: CI=false npm run build
 
-      # Debug: List installed global packages
-      - name: Debug: List installed packages
-        run: npm list -g --depth=0
-
       # Deploy the app to GitHub Pages using gh-pages
       - name: Deploy to GitHub Pages
-        run: npm run deploy  # Ensure the script uses the locally installed gh-pages
+        run: gh-pages -d build  # Uses globally installed gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
