@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+
+      - name: Build the project
+        run: CI=false npm run build # Disable CI to ignore warnings!
+
       # Build the React app
       - name: Build the project
         run: npm run build
