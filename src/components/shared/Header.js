@@ -18,7 +18,7 @@ function Header() {
                 <Link to="/events" className="nav-link">Events</Link>
 
                 {/* Volunteer link to Google Form */}
-                <a href="https://your-google-form-link.com" target="_blank" rel="noopener noreferrer" className="nav-link">Volunteer</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScJbcV7tG3lZus4ps4SBJ0M0ZwMJV8cI9fSnt2U86VPgpgsPA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="nav-link">Volunteer</a>
 
                 <a href="https://github.com/coogchallengers" target="_blank" rel="noopener noreferrer" className="nav-link">Resources</a>
 

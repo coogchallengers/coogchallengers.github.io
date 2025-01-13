@@ -1,0 +1,146 @@
+/* ------------------ event description (rh side) ---------------- */
+.event-card {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.filter-section {
+    margin-bottom: 15px;
+}
+
+.no-events {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+}
+
+.upcoming-events ul {
+    padding-left: 0;
+}
+
+.upcoming-events li {
+    list-style-type: none;
+}
+
+.upcoming-events h3 {
+    margin-top: 20px;
+}
+
+
+.events-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 70px;
+}
+
+.event-details-section {
+    width: 45%;
+}
+
+
+/* --------------------------- calendar (left handside) -----------------------*/
+/* force calendar grid layout */
+.react-calendar__month-view__days {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    /* force 7 columns per row */
+    grid-gap: 5px !important;
+    /* add space between tiles if needed */
+    align-items: center;
+    justify-items: center;
+}
+
+.react-calendar__month-view__weekdays {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+.react-calendar__tile {
+    height: 60px;
+    width: 60px;
+    padding: 30px;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin: 5px;
+    color: rgb(11, 27, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.react-calendar__tile--active {
+    background-color: #3bceff;
+    /* highlight active tile */
+    border-radius: 50%;
+}
+
+
+
+/* ensure all weeks have exactly 7 days, even when the month doesn't start on Sunday */
+.react-calendar__month-view__week {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    /* 7 columns for each week */
+    justify-items: center;
+}
+
+.react-calendar__tile--now {
+    background-color: #70f5ae !important;
+    /* highlight today */
+    border-radius: 50%;
+}
+
+
+
+
+/* calendar Section */
+.calendar-section {
+    display: grid;
+    place-items: center;
+    /* this centers both horizontally and vertically */
+    width: 45%;
+    background-color: rgb(193, 243, 231);
+    border-radius: 30px;
+    padding: 30px;
+    height: 600px;
+    /* set a fixed height */
+    overflow: auto;
+    /* add this if content overflows */
+}
+
+
+
+/* event Details Section */
+.event-details-section {
+    width: 45%;
+}
+
+.center-container-3 h1 {
+    text-align: center;
+}
+
+.has-event {
+    background-color: #facf6a;
+    border-radius: 90%;
+}
+
+@media (max-width: 600px) {
+    .react-calendar {
+        width: 100%;
+        /* responsive calendar size */
+    }
+
+    .react-calendar__tile {
+        margin: 2px;
+        padding: 8px;
+    }
+}
