@@ -18,21 +18,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Use the Node version appropriate for your app
+          node-version: '14'  # Use Node version appropriate for your app
 
       # Install dependencies
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      # Clear npm cache
+      # Clear npm cache (optional but can help)
       - name: Clear npm cache
         run: npm cache clean --force
 
-      # Force install gh-pages globally
+      # Install gh-pages globally (if not already installed)
       - name: Install gh-pages globally
         run: npm install -g gh-pages
 
-      # Debug: Check if gh-pages is installed
+      # Debug: Verify gh-pages installation (this step can help with debugging)
       - name: Verify gh-pages installation
         run: gh-pages --version
 
@@ -40,8 +40,8 @@ jobs:
       - name: Build the project
         run: CI=false npm run build
 
-      # Deploy the app to GitHub Pages using gh-pages command
+      # Deploy the app to GitHub Pages using gh-pages
       - name: Deploy to GitHub Pages
-        run: gh-pages -d build
+        run: npm run deploy  # Ensure the script uses the locally installed gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
