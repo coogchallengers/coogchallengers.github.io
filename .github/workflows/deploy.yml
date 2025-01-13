@@ -1,3 +1,5 @@
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
@@ -30,12 +32,12 @@ jobs:
       - name: Set up SSH key for deployment
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_SSH_KEY }}
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_SSH_KEY }}  # Make sure this secret is added correctly
 
       # Deploy the app to GitHub Pages using gh-pages with SSH
       - name: Deploy to GitHub Pages
         run: |
-          git remote set-url origin git@github.com:coogchallengers/coogchallengers.github.io.git
-          gh-pages -d build
+          git remote set-url origin git@github.com:coogchallengers/coogchallengers.github.io.git  # Ensure SSH URL
+          gh-pages -d build  # Deploy to the 'build' directory
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
