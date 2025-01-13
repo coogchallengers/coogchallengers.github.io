@@ -40,6 +40,10 @@ jobs:
       - name: Build the project
         run: CI=false npm run build
 
+      # Debug: List installed global packages
+      - name: Debug: List installed packages
+        run: npm list -g --depth=0
+
       # Deploy the app to GitHub Pages using gh-pages
       - name: Deploy to GitHub Pages
         run: npm run deploy  # Ensure the script uses the locally installed gh-pages
