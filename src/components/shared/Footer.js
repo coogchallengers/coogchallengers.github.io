@@ -6,7 +6,7 @@ function Footer() {
         <footer className="footer">
             {/* <p className="footer-text">Stay connected to stay tuned to the latest updates</p> */}
             <div className="social-media">
-                <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                <a href="https://discord.gg/nHRbS2Gw" target="_blank" rel="noopener noreferrer" aria-label="Discord">
                     <i className="fab fa-discord"></i>
                 </a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
