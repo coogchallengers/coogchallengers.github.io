@@ -12,7 +12,7 @@ function Footer() {
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <i className="fab fa-linkedin"></i>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/coogchallengers/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <i className="fab fa-instagram"></i>
                 </a>
                 <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
