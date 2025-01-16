@@ -219,19 +219,17 @@ section h2 {
 /*************************  Meet the team [Section 4]   **************************/
 
 #meet-the-team{
-  background-color: white; 
-  color: #333; /* dark text for contrast */
-  text-align: center; /* center-align all content */
-  padding: 60px 20px;
-  border-radius: 8px;
-  margin-bottom: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  /* display: flex;  */
+  /* a) background color */ 
+  background-color: white;
 
-  display:grid; 
-  grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr)); 
-  gap: 20px; 
+  /* b) section layout format */ 
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /*adjusts columns */   
+
+  /* c) text alignment */ 
+  text-align: center;
+
+  padding: 100px 100px 100px 100px;  /* top, right, bottom, left */ 
 }
 
 .team-group {
@@ -263,17 +261,22 @@ section h2 {
   }
 
 .officer {
-    width: 100%; /* use the full grid cell width */
-    max-width: 250px; /* ensure consistent width */
-    min-height: 150px; /* ensure consistent height */
-    text-align: center;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease; /* smooth transition for hover effects */
-    position: relative;
+    /* a) background color */ 
+    background-color: rgb(196, 252, 234);
+
+    /* b) section layout format */ 
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /*adjusts columns */   
+
+    /* c) objects within section layout and style */ 
+    padding: 20px 10px 30px 10px;  /* top, right, bottom, left */ 
+    border-radius: 40px;
     height: 200px;
+
+  
+    /* d) text alignment */ 
+    text-align: center;
+  
+    
 
     transition: all 0.3s ease
 }

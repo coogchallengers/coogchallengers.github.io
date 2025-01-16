@@ -219,7 +219,7 @@ function Home() {
                                 },
                                 {
                                     name: "Gabriela Romero Ramirez",
-                                    role: "Data Structure Lead",
+                                    role: "Data Structures Lead",
                                     img: "/images/officers_pfp/2025/cute_cat_1.jpg",
                                     email: "email.com",
                                     linkedin: "http://linkedin.com/in/gabriela-romero-ramirez"
@@ -227,10 +227,17 @@ function Home() {
                                 },
                                 {
                                     name: "Jayson Luong",
-                                    role: "Data Structure Lead",
+                                    role: "Data Structures Lead",
                                     img: "/images/officers_pfp/2025/cute_cat_3.jpg",
                                     email: "jkluong2@cougarnet.uh.edu",
                                     linkedin: "https://www.linkedin.com/in/jaysonluong/"
+                                },
+                                {
+                                    name: "Widyan Hussien",
+                                    role: "Data Structures Lead ",
+                                    img: "/images/officers_pfp/2025/cute_cat_3.jpg",
+                                    email: "whussien@cougarnet.uh.edu",
+                                    linkedin: "https://www.linkedin.com/in/widyan-hussien"
                                 },
                                 {
                                     name: "Shinelle Barretto",
@@ -261,16 +268,11 @@ function Home() {
                                     linkedin:"https://www.linkedin.com/in/angelam-abrea/"
                                 },
                                 {
-                                    name: "Abigail",
+                                    name: "Abigail Bradshaw",
                                     role: "Creative Director",
-                                    img: "/images/officers_pfp/2025/cute_cat_3.jpg",
-                                    email: "johncena@example.com"
-                                },
-                                {
-                                    name: "Miles",
-                                    role: "Engagement & Outreach Director",
-                                    img: "/images/officers_pfp/2025/cute_cat_3.jpg",
-                                    email: "johncena@example.com"
+                                    img: "/images/officers_pfp/2025/cute_cat_2.jpg",
+                                    email: "aabradsh@cougarnet.uh.edu",
+                                    linkedin:"https://www.linkedin.com/in/abigail-bradshaw/"
                                 }
                             ].map((officer, index) => (
                                 <div className="officer" key={index}>
