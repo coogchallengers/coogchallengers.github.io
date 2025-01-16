@@ -233,6 +233,13 @@ function Home() {
                                     linkedin: "https://www.linkedin.com/in/jaysonluong/"
                                 },
                                 {
+                                    name: "Widyan Hussien",
+                                    role: "Data Structure Lead",
+                                    img: "/images/officers_pfp/2025/cute_cat_3.jpg",
+                                    email: "whussien@cougarnet.uh.edu", 
+                                    linkedin: "https://www.linkedin.com/in/widyan-hussien"
+                                },
+                                {
                                     name: "Shinelle Barretto",
                                     role: "Event Coordinator",
                                     img: "/images/officers_pfp/2025/cute_cat.jpeg",
@@ -261,16 +268,18 @@ function Home() {
                                     linkedin:"https://www.linkedin.com/in/angelam-abrea/"
                                 },
                                 {
-                                    name: "Abigail",
+                                    name: "Abigail Bradshaw ",
                                     role: "Creative Director",
                                     img: "/images/officers_pfp/2025/cute_cat_3.jpg",
-                                    email: "johncena@example.com"
+                                    linkedin: "https://www.linkedin.com/in/abigail-bradshaw/", 
+                                    email: "aabradsh@cougarnet.uh.edu"
                                 },
                                 {
-                                    name: "Miles",
+                                    name: "Sam Khudari",
                                     role: "Engagement & Outreach Director",
                                     img: "/images/officers_pfp/2025/cute_cat_3.jpg",
-                                    email: "johncena@example.com"
+                                    email: "sskhudai@cougarnet.uh.edu", 
+                                    linkedin: "www.linkedin.com/in/sam-khudairi-b51b74317"
                                 }
                             ].map((officer, index) => (
                                 <div className="officer" key={index}>
