@@ -226,6 +226,12 @@ section h2 {
   border-radius: 8px;
   margin-bottom: 100px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* display: flex;  */
+
+  display:grid; 
+  grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr)); 
+  gap: 20px; 
 }
 
 .team-group {
@@ -269,6 +275,7 @@ section h2 {
     position: relative;
     height: 200px;
 
+    transition: all 0.3s ease
 }
 
 .officer h4 {
