@@ -270,14 +270,14 @@ function Home() {
                                 {
                                     name: "Abigail Bradshaw ",
                                     role: "Creative Director",
-                                    img: "/images/officers_pfp/2025/cute_cat_3.jpg",
+                                    img: "/images/officers_pfp/2025/cute_cat_2.jpg",
                                     linkedin: "https://www.linkedin.com/in/abigail-bradshaw/", 
                                     email: "aabradsh@cougarnet.uh.edu"
                                 },
                                 {
-                                    name: "Sam Khudari",
+                                    name: "Sam Khudairi",
                                     role: "Engagement & Outreach Director",
-                                    img: "/images/officers_pfp/2025/cute_cat_3.jpg",
+                                    img: "/images/officers_pfp/2025/cute_cat_1.jpg",
                                     email: "sskhudai@cougarnet.uh.edu", 
                                     linkedin: "www.linkedin.com/in/sam-khudairi-b51b74317"
                                 }
