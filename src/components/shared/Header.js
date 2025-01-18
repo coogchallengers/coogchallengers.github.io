@@ -8,7 +8,7 @@ function Header() {
             {/* Logo Section */}
             <div className="logo">
                 <img src="images/logo.png" alt="Organization Logo" className="logo-image" />
-                <span className="logo-text">Coog Challenger</span> {/* Optional text next to the logo */}
+                <span className="logo-text">Coog Challengers</span> {/* Optional text next to the logo */}
             </div>
 
             {/* Navigation Links */}
