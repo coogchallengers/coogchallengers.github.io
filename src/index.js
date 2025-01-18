@@ -4,6 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+document.title = "Coog Challengers" 
+
+const link = document.createElement('link'); 
+link.rel = 'icon'; 
+link.href = '/images/favicon/logo.png'
+
+document.head.appendChild(link); 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
