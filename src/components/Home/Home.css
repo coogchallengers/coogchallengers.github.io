@@ -268,7 +268,7 @@ section h2 {
     min-height: 150px; /* ensure consistent height */
     text-align: center;
     padding: 15px;
-    background-color: #fff;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease; /* smooth transition for hover effects */
@@ -291,7 +291,7 @@ section h2 {
 
 
 .officer:hover {
-    background-color: white;  /* light yellow background */
+    background-color: lightcyan;  /* light yellow background */
     transform: scale(1.05);      /* slightly enlarge on hover */
     border-radius: 15px;         /* make corners more rounded */
     box-shadow: 0 0 15px 5px rgba(173, 216, 230, 0.8); /* baby blue glow */
@@ -300,7 +300,8 @@ section h2 {
 
 
 .officer h4:hover {
-    color: #55965B;              
+    /* color: #55965B; */
+    color:#333
 }
 
 .officer p:hover {
