@@ -83,8 +83,6 @@
     border-radius: 50%;
 }
 
-
-
 /* ensure all weeks have exactly 7 days, even when the month doesn't start on Sunday */
 .react-calendar__month-view__week {
     display: grid !important;
@@ -117,8 +115,6 @@
     /* add this if content overflows */
 }
 
-
-
 /* event Details Section */
 .event-details-section {
     width: 45%;
@@ -144,3 +140,52 @@
         padding: 8px;
     }
 }
+
+/* ----------------------   Mobile View ------------------*/
+@media (max-width: 768px) {
+    .events-container {
+    display: block;
+    padding: 1px;
+    }
+    
+    .has-event {
+    background-color: #facf6a !important; /* 3nsure the background color applies on mobile too */
+    border-radius: 90%;
+    }
+    
+    
+    /* calendar on top, event details below on mobile */
+    .calendar-section {
+    width: 84%;
+    height: auto; /* adjust height for mobile */
+    margin-bottom: 40px; /* add space between sections */
+    
+    }
+    
+    .event-details-section {
+    width: 100%;
+    margin-top: 20px;
+    }
+    
+    /* modify calendar tile on mobile */
+    .react-calendar__tile {
+    margin: 2px;
+    padding: 2px;
+    background-color: #f9f9f9;
+    }
+    
+    .react-calendar__month-view__weekdays {
+    font-size: 0.8rem; /* make weekday text smaller on mobile */
+    }
+    
+    .react-calendar__tile {
+    font-size: 0.9rem; /* make calendar tiles smaller on mobile */
+    height: 40px;
+    width: 40px;
+    }
+    
+    .react-calendar__month-view__weekdays,
+    .react-calendar__month-view__days {
+    grid-template-columns: repeat(7, 1fr);
+    }
+    }
