@@ -1,4 +1,4 @@
-/* Base styles */
+/* Header Section */
 .header {
     background-color: white;
     color: black;
@@ -12,13 +12,14 @@
     z-index: 1000;
 }
 
+/* Logo Section */
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    max-height: 50px;
+    max-height: 50px; /* Ensures logo size remains fixed */
     margin-right: 15px;
 }
 
@@ -28,12 +29,14 @@
     color: #333;
 }
 
+/* Navigation Menu for Desktop */
 .nav {
     display: flex;
     gap: 20px;
     transition: transform 0.3s ease;
 }
 
+/* Navigation Link Styles */
 .nav-link {
     color: black;
     text-decoration: none;
@@ -46,39 +49,55 @@
     color: orange;
 }
 
-/* Hamburger menu (hidden by default) */
+/* Hamburger menu (hidden by default for desktop) */
 .hamburger {
-    display: none;
+    display: none; /* Only show in mobile view */
     font-size: 24px;
     cursor: pointer;
 }
 
-/* Responsive styles */
+/* Responsive styles for small screens */
 @media (max-width: 768px) {
     .hamburger {
-        display: block;
+        display: block; /* Show hamburger menu icon */
+        position: absolute;
+        right: 30px; /* Aligns to the right-hand side */
+        top: 20px;
     }
 
+    /* Slide-in Navigation Menu */
     .nav {
-        display: none;
+
+        border-radius: 10px;
+        display: flex;
         flex-direction: column;
-        background-color: rgba(58, 53, 53, 0.7);
-        position: absolute;
-        top: 100%;
+        background-color: rgba(248, 245, 245, 0.3);
+        position: fixed;
+        top: 80px; /* Tucked under the header (adjust based on header height) */
         right: 0;
-        width: 100%;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        transform: translateY(-100%);
-        padding: 20px 20px 20px 20px; 
+        height: calc(100% - 60px) 40px; /* Adjusts height to exclude header */
+        width: 100px; /* Width of the slide-in menu */
+        box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%); /* Starts off-screen */
+        transition: transform 0.3s ease; /* Smooth slide-in effect */
+        padding: 20px;
+        z-index: 999; /* Below header z-index */
     }
 
     .nav.open {
-        display: flex;
-        transform: translateY(0);
+        transform: translateX(0); /* Slide into view */
     }
 
     .nav-link {
         text-align: center;
-        padding: 10px 0;
+        padding: 20px 10px; /* Adds spacing between links */
+        color: black; /* Changes link color */
+        background-color: rgb(71, 247, 150);
+        border-radius: 30px;
+    }
+
+    .nav-link:hover {
+        color: black; /* Highlight effect */
+        background-color: white;
     }
 }
