@@ -90,7 +90,7 @@
 
     .nav-link {
         text-align: center;
-        padding: 20px 10px; /* Adds spacing between links */
+        padding: 30px 10px; /* Adds spacing between links */
         color: black; /* Changes link color */
         background-color: rgb(71, 247, 150);
         border-radius: 30px;
@@ -99,5 +99,6 @@
     .nav-link:hover {
         color: black; /* Highlight effect */
         background-color: white;
+        font-size: larger;
     }
 }
