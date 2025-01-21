@@ -26,6 +26,11 @@
 
   /* ---------------    The rest of the elements of the webpage ------------------ */ 
 
+
+@media (max-width: 480px) {
+  /* Styles for smartphones */
+}
+
   /* general styles */
   .home {
     font-family: 'Arial', sans-serif;
