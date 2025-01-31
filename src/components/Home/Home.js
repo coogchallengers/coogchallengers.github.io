@@ -192,7 +192,7 @@ function Home() {
                                 {
                                     name: "Mustafa Sahin",
                                     role: "Technical Director",
-                                    img: "/images/officers_pfp/2025/shasta.jpeg",
+                                    img: "/images/officers_pfp/2025/shasta.jpg",
                                     email: "mesahin2@cougarnet.uh.edu", 
                                     linkedin:"http://linkedin.com/in/mustafa-sahin03"
                                 },
