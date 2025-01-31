@@ -198,7 +198,7 @@ function Home() {
                                 },
                                 {
                                     name: "Maryam Ahmed",
-                                    role: "Fundraiser director ",
+                                    role: "Fundraiser Director ",
                                     img: "/images/officers_pfp/2025/shasta.jpg",
                                     email: "ahmedmaryam689@gmail.com",
                                     linkedin:"https://www.linkedin.com/in/maryam-ahmed-54b471215?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
