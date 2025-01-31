@@ -189,6 +189,14 @@ function Home() {
                                     email: "marodr77@cougarnet.uh.edu",
                                     linkedin:"https://www.linkedin.com/in/miguel-rodriguez302002 "
                                 },
+                                
+                                {
+                                    name: "Stephanie Alvarez",
+                                    role: "Event Coordinator",
+                                    img: "/images/officers_pfp/2025/shasta.jpg",
+                                    email: "Salvar27@cougarnet.uh.edu",
+                                    linkedin:"http://linkedin.com/in/stephanie-alvarez-pleasehireme"
+                                },
                                 {
                                     name: "Mustafa Sahin",
                                     role: "Technical Director",
@@ -246,13 +254,7 @@ function Home() {
                                     email: "srbarret@cougarnet.uh.edu",
                                     linkedin:"https://www.linkedin.com/in/shinelle-barretto-8a7487268"
                                 },
-                                {
-                                    name: "Stephanie Alvarez",
-                                    role: "Event Coordinator",
-                                    img: "/images/officers_pfp/2025/shasta.jpg",
-                                    email: "Salvar27@cougarnet.uh.edu",
-                                    linkedin:"http://linkedin.com/in/stephanie-alvarez-pleasehireme"
-                                },
+                                
                                 {
                                     name: "Jacqueline Tran",
                                     role: "Event Coordinator",
