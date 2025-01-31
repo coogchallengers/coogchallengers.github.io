@@ -189,7 +189,6 @@ function Home() {
                                     email: "marodr77@cougarnet.uh.edu",
                                     linkedin:"https://www.linkedin.com/in/miguel-rodriguez302002 "
                                 },
-                                
                                 {
                                     name: "Stephanie Alvarez",
                                     role: "Treasurer",
@@ -197,6 +196,14 @@ function Home() {
                                     email: "Salvar27@cougarnet.uh.edu",
                                     linkedin:"http://linkedin.com/in/stephanie-alvarez-pleasehireme"
                                 },
+                                {
+                                    name: "Maryam Ahmed",
+                                    role: "Fundraiser director ",
+                                    img: "/images/officers_pfp/2025/shasta.jpg",
+                                    email: "ahmedmaryam689@gmail.com",
+                                    linkedin:"https://www.linkedin.com/in/maryam-ahmed-54b471215?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                                },
+
                                 {
                                     name: "Mustafa Sahin",
                                     role: "Technical Director",
