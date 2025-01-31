@@ -192,7 +192,7 @@ function Home() {
                                 
                                 {
                                     name: "Stephanie Alvarez",
-                                    role: "Event Coordinator",
+                                    role: "Treasurer",
                                     img: "/images/officers_pfp/2025/shasta.jpg",
                                     email: "Salvar27@cougarnet.uh.edu",
                                     linkedin:"http://linkedin.com/in/stephanie-alvarez-pleasehireme"
