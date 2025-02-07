@@ -31,6 +31,25 @@ function Header() {
                 {/* -----------------------------------  Events  --------------------------------*/}
                 <Link to="/events" className="nav-link" onClick={() => setMenuOpen(false)}>Events</Link>
 
+                {/*<Link to="/leaderboard/data-science" className="nav-link">Data Science Leaderboard</Link>
+                <Link to="/leaderboard/data-structures" className="nav-link">Data Structures Leaderboard</Link>
+                <Link to="/competition/1" className="nav-link">Competition Leaderboard</Link>*/}
+
+                {/* Leaderboard Dropdown */}
+                <div className="nav-item dropdown"
+                    onMouseEnter={() => setMenuOpen(true)}
+                    onMouseLeave={() => setMenuOpen(false)}
+                >
+                    <span className="nav-link">Leaderboard ▾</span>
+                    {menuOpen && (
+                        <div className="dropdown-menu">
+                            <Link to="/leaderboard" className="dropdown-item" onClick={() => setMenuOpen(false)}>Overall Leaderboard</Link>
+                            <Link to="/leaderboard/data-science" className="dropdown-item" onClick={() => setMenuOpen(false)}>Data Science Leaderboard</Link>
+                            <Link to="/leaderboard/data-structures" className="dropdown-item" onClick={() => setMenuOpen(false)}>Data Structures Leaderboard</Link>
+                            {/*<Link to="/competition/1" className="dropdown-item" onClick={() => setMenuOpen(false)}>Competition Leaderboard</Link>*/}
+                        </div>
+                    )}
+                </div>
 
                 {/* ----------------------------------- Volunteer   --------------------------------*/}
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScJbcV7tG3lZus4ps4SBJ0M0ZwMJV8cI9fSnt2U86VPgpgsPA/viewform?usp=dialog" 
