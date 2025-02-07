@@ -102,3 +102,36 @@
         font-size: larger;
     }
 }
+
+/* Dropdown Menu Styling */
+.dropdown {
+    margin-top: 5px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #555;
+    color: #ffcc00;
+  }
+  
