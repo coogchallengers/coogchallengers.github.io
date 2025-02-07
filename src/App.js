@@ -7,7 +7,6 @@ import Footer from './components/shared/Footer';
 
 import Leaderboard from './components/Leaderboard/Leaderboard';
 import OverallLeaderboard from './components/Leaderboard/OverallLeaderboard';
-import CompetitionLeaderboard from './components/Leaderboard/CompetitionLeaderboard';
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
 
         <Route path="/leaderboard/:category" element={<Leaderboard />} />
         <Route path="/leaderboard" element={<OverallLeaderboard />} />
-        <Route path="/competition/:id" element={<CompetitionLeaderboard />} />
         
       </Routes>
       <Footer />
