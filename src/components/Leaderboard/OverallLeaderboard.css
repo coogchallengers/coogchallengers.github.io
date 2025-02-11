@@ -1,116 +1,101 @@
 /* === OverallLeaderboard.css === */
 
-/* CSS Variables for consistency */
+/* CSS Variables for Theming */
 :root {
-    --primary-color: #55965B;
-    --bg-color: #f4f7f6;
-    --card-bg: #ffffff;
-    --text-color: #333;
-    --transition-speed: 300ms;
-    --border-radius: 8px;
-    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Container Styles */
+  --primary-color: #55965B;
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --text-color: #333;
+  --transition-speed: 300ms;
+  --border-radius: 8px;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* === Container Styles === */
+.overall-leaderboard {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  font-family: 'Roboto', Arial, sans-serif;
+  text-align: center;
+}
+
+.overall-leaderboard h1 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-size: 24px;
+}
+
+/* === Leaderboard Table Styles === */
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.leaderboard-table th, 
+.leaderboard-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.leaderboard-table th {
+  background-color: var(--bg-color);
+  font-weight: bold;
+}
+
+.leaderboard-table tr:last-child td {
+  border-bottom: none;
+}
+
+.leaderboard-entry:hover {
+  background-color: #f9f9f9;
+}
+
+/* === Error Message Styling === */
+.error {
+  color: red;
+  margin-top: 20px;
+}
+
+/* === Fade-in/out Animation for Table Rows === */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--transition-speed) ease-in-out, 
+              transform var(--transition-speed) ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--transition-speed) ease-in-out, 
+              transform var(--transition-speed) ease-in-out;
+}
+
+/* === Responsive Design for Mobile Screens === */
+@media (max-width: 768px) {
   .overall-leaderboard {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: var(--card-bg);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    font-family: 'Roboto', Arial, sans-serif;
-    text-align: center;
+    padding: 15px;
   }
-  
-  .overall-leaderboard h1 {
-    margin-bottom: 20px;
-    color: var(--text-color);
+
+  .leaderboard-table th, 
+  .leaderboard-table td {
+    padding: 10px;
+    font-size: 14px;
   }
-  
-  /* Leaderboard List & Entry Styles */
-  .leaderboard-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .leaderboard-entry {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    border-bottom: 1px solid #eee;
-    transition: background-color var(--transition-speed);
-  }
-  
-  .leaderboard-entry:hover {
-    background-color: #f5f5f5;
-  }
-  
-  .entry-rank {
-    font-weight: bold;
-    width: 30px;
-    text-align: center;
-  }
-  
-  .entry-name {
-    flex-grow: 1;
-    margin-left: 10px;
-    text-align: left;
-  }
-  
-  .entry-points {
-    font-weight: bold;
-    white-space: nowrap;
-  }
-  
-  /* Error Message Styling */
-  .error {
-    color: red;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  /* Fade-in/out Animation for List Items */
-  .fade-enter {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  
-  .fade-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-in-out;
-  }
-  
-  .fade-exit {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .fade-exit-active {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-in-out;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .overall-leaderboard {
-      padding: 15px;
-    }
-  
-    .leaderboard-entry {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .entry-rank,
-    .entry-name,
-    .entry-points {
-      display: block;
-      margin: 5px 0;
-    }
-  }
-  
+}

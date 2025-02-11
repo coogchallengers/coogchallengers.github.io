@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import './OverallLeaderboard.css';
+import React, { useState, useEffect } from "react";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import "./OverallLeaderboard.css";
 
 const OverallLeaderboard = () => {
   const [students, setStudents] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/data/leaderboard.json')
+    fetch("/data/leaderboard.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -42,17 +42,26 @@ const OverallLeaderboard = () => {
     <div className="overall-leaderboard">
       <h1>Overall Leaderboard</h1>
       {students.length > 0 ? (
-        <TransitionGroup component="ul" className="leaderboard-list">
-          {students.map((student, index) => (
-            <CSSTransition key={index} timeout={300} classNames="fade">
-              <li className="leaderboard-entry">
-                <span className="entry-rank">{index + 1}.</span>
-                <span className="entry-name">{student.name}</span>
-                <span className="entry-points">Total Points: {student.totalPoints}</span>
-              </li>
-            </CSSTransition>
-          ))}
-        </TransitionGroup>
+        <table className="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Total Points</th>
+            </tr>
+          </thead>
+          <TransitionGroup component="tbody">
+            {students.map((student, index) => (
+              <CSSTransition key={index} timeout={300} classNames="fade">
+                <tr className="leaderboard-entry">
+                  <td>{index + 1}</td>
+                  <td>{student.name}</td>
+                  <td>{student.totalPoints}</td>
+                </tr>
+              </CSSTransition>
+            ))}
+          </TransitionGroup>
+        </table>
       ) : (
         <p>No data available.</p>
       )}
