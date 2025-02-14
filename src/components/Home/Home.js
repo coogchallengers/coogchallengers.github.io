@@ -190,6 +190,21 @@ function Home() {
                                     linkedin:"https://www.linkedin.com/in/miguel-rodriguez302002 "
                                 },
                                 {
+                                    name: "Mustafa Sahin",
+                                    role: "Technical Director",
+                                    img: "/images/officers_pfp/2025/mustafa.png",
+                                    email: "mesahin2@cougarnet.uh.edu", 
+                                    linkedin:"http://linkedin.com/in/mustafa-sahin03"
+                                },
+                                {
+                                    name: "Jacqueline Sanchez",
+                                    role: "Technical Director",
+                                    img: "/images/officers_pfp/2025/shasta.jpg",
+                                    email: "jsanchez75@uh.edu",
+                                    linkedin:"https://www.linkedin.com/in/jacquelinesa7/"
+                                },
+                                
+                                {
                                     name: "Stephanie Alvarez",
                                     role: "Treasurer",
                                     img: "/images/officers_pfp/2025/shasta.jpg",
@@ -203,25 +218,10 @@ function Home() {
                                     email: "ahmedmaryam689@gmail.com",
                                     linkedin:"https://www.linkedin.com/in/maryam-ahmed-54b471215?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                                 },
-
-                                {
-                                    name: "Mustafa Sahin",
-                                    role: "Technical Director",
-                                    img: "/images/officers_pfp/2025/shasta.jpg",
-                                    email: "mesahin2@cougarnet.uh.edu", 
-                                    linkedin:"http://linkedin.com/in/mustafa-sahin03"
-                                },
-                                {
-                                    name: "Jacqueline Sanchez",
-                                    role: "Technical Director",
-                                    img: "/images/officers_pfp/2025/shasta.jpg",
-                                    email: "jsanchez75@uh.edu",
-                                    linkedin:"https://www.linkedin.com/in/jacquelinesa7/"
-                                },
                                 {
                                     name: "Tan Tran",
                                     role: "Data Science Lead",
-                                    img: "/images/officers_pfp/2025/shasta.jpg",
+                                    img: "/images/officers_pfp/2025/tan.png",
                                     email: "thtran39@cougarnet.uh.edu", 
                                     linkedin:"https://www.linkedin.com/in/tan-h-tran/"
                                 },
@@ -235,7 +235,7 @@ function Home() {
                                 {
                                     name: "Gabriela Romero Ramirez",
                                     role: "Data Structure Lead",
-                                    img: "/images/officers_pfp/2025/shasta.jpg",
+                                    img: "/images/officers_pfp/2025/gaby.png",
                                     email: "email.com",
                                     linkedin: "http://linkedin.com/in/gabriela-romero-ramirez"
 
@@ -243,14 +243,14 @@ function Home() {
                                 {
                                     name: "Jayson Luong",
                                     role: "Data Structure Lead",
-                                    img: "/images/officers_pfp/2025/shasta.jpg",
+                                    img: "/images/officers_pfp/2025/jayson.png",
                                     email: "jkluong2@cougarnet.uh.edu",
                                     linkedin: "https://www.linkedin.com/in/jaysonluong/"
                                 },
                                 {
                                     name: "Widyan Hussien",
                                     role: "Data Structure Lead",
-                                    img: "/images/officers_pfp/2025/shasta.jpg",
+                                    img: "/images/officers_pfp/2025/widyan.png",
                                     email: "whussien@cougarnet.uh.edu", 
                                     linkedin: "https://www.linkedin.com/in/widyan-hussien"
                                 },
@@ -265,7 +265,7 @@ function Home() {
                                 {
                                     name: "Jacqueline Tran",
                                     role: "Event Coordinator",
-                                    img: "/images/officers_pfp/2025/shasta.jpg",
+                                    img: "/images/officers_pfp/2025/jackie.png",
                                     email: "Jatran7@cougarnet.uh.edu",
                                     linkedin:"https://www.linkedin.com/in/jacqueline-tran-319a28288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                                 },
@@ -279,14 +279,14 @@ function Home() {
                                 {
                                     name: "Abigail Bradshaw ",
                                     role: "Creative Director",
-                                    img: "/images/officers_pfp/2025/shasta.jpg",
+                                    img: "/images/officers_pfp/2025/abby.png",
                                     linkedin: "https://www.linkedin.com/in/abigail-bradshaw/", 
                                     email: "aabradsh@cougarnet.uh.edu"
                                 },
                                 {
                                     name: "Sam Khudairi",
                                     role: "Engagement & Outreach Director",
-                                    img: "/images/officers_pfp/2025/shasta.jpg",
+                                    img: "/images/officers_pfp/2025/sam.png",
                                     email: "sskhudai@cougarnet.uh.edu", 
                                     linkedin: "www.linkedin.com/in/sam-khudairi-b51b74317"
                                 }
