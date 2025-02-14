@@ -1,70 +1,99 @@
 import React, { useState, useEffect } from "react";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import "./OverallLeaderboard.css";
+import { CSSTransition } from "react-transition-group";
+import "./Leaderboard.css";
 
 const OverallLeaderboard = () => {
   const [students, setStudents] = useState([]);
+  const [expandedRow, setExpandedRow] = useState(null);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     fetch("/data/leaderboard.json")
       .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         return response.json();
       })
       .then((data) => {
-        // Filter out students with no name or missing Total Points.
-        const filteredData = data.filter(
-          (student) => student.Student && student["Total Points"] !== null
-        );
+        const filteredData = data
+          .filter((student) => student.Student && student["Total Points"] !== null)
+          .map((student) => ({
+            name: student.Student,
+            totalPoints: parseInt(student["Total Points"], 10) || 0,
+            details: student,
+          }))
+          .sort((a, b) => b.totalPoints - a.totalPoints);
 
-        // Map the data to a simpler structure and parse Total Points as a number.
-        const studentsData = filteredData.map((student) => ({
-          name: student.Student,
-          totalPoints: parseInt(student["Total Points"], 10) || 0,
-        }));
-
-        // Sort the students in descending order based on total points.
-        studentsData.sort((a, b) => b.totalPoints - a.totalPoints);
-
-        setStudents(studentsData);
+        setStudents(filteredData);
+        setLoading(false);
       })
-      .catch((err) => setError(err.message));
+      .catch((err) => {
+        setError(err.message)
+        setLoading(false);
+  });
   }, []);
 
+  const toggleExpand = (index) => {
+    setExpandedRow(expandedRow === index ? null : index);
+  };
+
+  if (loading) {
+    return (
+      <div className="loader-container">
+        <div className="loader"></div>
+      </div>
+    );
+  }
+
   if (error) {
-    return <div className="overall-leaderboard error">{error}</div>;
+    return <div className="leaderboard-container error">{error}</div>;
   }
 
   return (
-    <div className="overall-leaderboard">
+    <div className="leaderboard-container">
       <h1>Overall Leaderboard</h1>
-      {students.length > 0 ? (
-        <table className="leaderboard-table">
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Name</th>
-              <th>Total Points</th>
-            </tr>
-          </thead>
-          <TransitionGroup component="tbody">
-            {students.map((student, index) => (
-              <CSSTransition key={index} timeout={300} classNames="fade">
-                <tr className="leaderboard-entry">
-                  <td>{index + 1}</td>
-                  <td>{student.name}</td>
-                  <td>{student.totalPoints}</td>
-                </tr>
+
+      <div className="leaderboard-list">
+        {students.length > 0 ? (
+          students.map((entry, index) => (
+            <div key={index} className="leaderboard-entry">
+              <div className="leaderboard-row" onClick={() => toggleExpand(index)}>
+                <span className="entry-rank">{index + 1}.</span>
+                <span className="entry-name">{entry.name}</span>
+                <span className="entry-points">Total Points: {entry.totalPoints}</span>
+              </div>
+
+              <CSSTransition
+                in={expandedRow === index}
+                timeout={300}
+                classNames="expand"
+                unmountOnExit
+              >
+                <div className="expanded-info">
+                  <p className="info-detail">
+                    <strong>Workshops/Socials:</strong> {entry.details["Workshops/ Socials (300)"] || 0}
+                  </p>
+                  <p className="info-detail">
+                    <strong>General Meetings:</strong> {entry.details["General Meetings (500)"] || 0}
+                  </p>
+                  <p className="info-detail">
+                    <strong>Competitions:</strong> {entry.details["Competitions (1000)"] || 0}
+                  </p>
+                  <p className="info-detail">
+                    <strong>Workshop Questions:</strong> {entry.details["Workshop Questions (100)"] || 0}
+                  </p>
+                  <p className="info-detail">
+                    <strong>Workshop Answers:</strong> {entry.details["Workshop Answers (200)"] || 0}
+                  </p>
+                </div>
               </CSSTransition>
-            ))}
-          </TransitionGroup>
-        </table>
-      ) : (
-        <p>No data available.</p>
-      )}
+            </div>
+          ))
+        ) : (
+          <p>No data available.</p>
+        )}
+      </div>
     </div>
   );
 };
