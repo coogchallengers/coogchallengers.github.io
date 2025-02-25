@@ -9,13 +9,13 @@ function Footer() {
                 <a href="https://discord.gg/nHRbS2Gw" target="_blank" rel="noopener noreferrer" aria-label="Discord">
                     <i className="fab fa-discord"></i>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/company/coog-challengers" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <i className="fab fa-linkedin"></i>
                 </a>
                 <a href="https://www.instagram.com/coogchallengers/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <i className="fab fa-instagram"></i>
                 </a>
-                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@coogchallengers" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                     <i className="fab fa-tiktok"></i>
                 </a>
                 <a href="https://github.com/coogchallengers" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
